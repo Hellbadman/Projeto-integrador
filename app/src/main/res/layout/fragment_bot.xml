@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BotFrag">
+
+    <LinearLayout
+        android:id="@+id/awLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="3dp"
+            android:text="@string/aidiwow_assistant"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/idScroll"
+        android:layout_width="match_parent"
+        android:layout_height="749dp"
+        android:layout_above="@+id/idMsg"
+        android:layout_below="@id/awLL"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="-4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/idChats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="First aid for stroke"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="First aid for bleeding"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="First aid for burn"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="First aid for choking"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-10dp">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="First aid for poisoning"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="How to do CPR"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="Diabetic Emergency"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/idChip8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#DCDCDC"
+                            android:text="First aid for seizure"
+                            android:textColor="@color/black" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/idMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="6dp">
+
+        <EditText
+            android:id="@+id/idUserMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toStartOf="@id/idSend"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/enter_message"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#808080" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="@color/userMsgBlue"
+            android:src="@drawable/ic_baseline_send_24"
+            app:fabCustomSize="45dp"
+            app:tint="@color/black" />
+    </RelativeLayout>
+</RelativeLayout>
